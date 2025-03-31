@@ -1,42 +1,22 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <!---<meta name="viewport" content="width=device-width, initial-scale=1.0">-->
-  <head>
-    <meta charset="utf-8">
-    <title>Hurdle Hopper</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="app.js" charset="utf-8"></script>
-  </head>
-  <body>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="start.css">
+    <title>HURDLE HOPPER</title>
+</head>
+<body>
+    <div class="container">
+        <h1>HURDLE HOPPER</h1>
+        <button onclick="startGame()"> Start Game </button>
+    </div>
 
-  <div class="border-left" align="center"></div>
+    <script>
+    function startGame() {
+        window.location.href ='app.html';
+    }
+</script>
 
-  
-  <div class="game-container" align="center">
-      <div class="border-top" align="center"></div>
-      <div class="sky" align="center">
-          <div class="bird" align="center"></div>
-      </div>
-  </div>
-  <!-- Countdown Overlay -->
-  <div id="countdownOverlay">Game starts in 3</div>
-</div>
-
-  </div>
-    <div class="score" style="color: white ; padding-left: 90px ;" > Score: <span id="score">0</span></div>
-  </div>
-  
-  <div class="ground-container" align="center">
-    <div class="ground-moving" align="center"></div>
-  </div>
-  <div class="border-right" align="center"></div>
-
-   <div class="overlay" id="gameOverOverlay">
-    <div class="game-over">GAME OVER</div>
-    <!-- <button id="restartButton">Restart</button> -->
-  </div>
-
-  <audio id="jumpSound" src="cartoon-jump-6462.mp3"></audio>
-
-  </body>
+</body>
 </html>

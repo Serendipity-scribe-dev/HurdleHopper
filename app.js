@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let birdBottom = 100;
     let gravity = 1; // Lower gravity for potentially easier gameplay, adjust as needed
     let isGameOver = false;
-    let gap = 430;
+    let gap = 410;//changes
     let score = 0; // Score starts at 0
     let gameTimerId;
 
@@ -190,7 +190,7 @@ document.addEventListener('DOMContentLoaded', () => {
              // Calculate the coordinate of the top edge of the *bottom* obstacle's visual
              const bottomObstacleTopEdge = obstacleBottom + bottomObstacleVisualHeight;
              // Calculate the coordinate of the bottom edge of the *top* obstacle's visual
-             const topObstacleBottomEdge = obstacleBottom + gap; // Assuming the top obstacle image extends upwards from this point
+             const topObstacleBottomEdge = obstacleBottom + gap - topObstacle.offsetHeight; // Assuming the top obstacle image extends upwards from this point
 
              console.log("--- Collision Check Values ---");
              console.log("Bird: L=", birdCollisionBoxLeft, "R=", birdCollisionBoxRight, "T=", birdCollisionBoxTop, "B=", birdCollisionBoxBottom);
@@ -209,7 +209,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     collided = true;
                 }
                 // ✅ Bird collides with top pipe
-                else if (birdCollisionBoxTop > topObstacleBottomEdge -10) {
+                else if (birdCollisionBoxTop <= topObstacleBottomEdge -5) {
                     console.log(`Collision: Bird top (${birdCollisionBoxTop.toFixed(1)}) > Top Obstacle Bottom Edge (${topObstacleBottomEdge.toFixed(1)})`);
                     collided = true;
                 }       
