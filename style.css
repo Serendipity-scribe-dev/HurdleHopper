@@ -1,0 +1,196 @@
+body {
+    
+    display: flex
+}
+
+.game-container {
+
+    width: 500px;
+    height: 730px;
+    position: absolute; 
+    left: 80px;
+    margin: auto;
+}
+
+.border-left {
+    width: 80px;
+    height: 790px;
+    position:  absolute;
+    background-color: white;
+    z-index: +2;  
+}
+
+.border-right {
+    width: 80px;
+    height: 790px;
+    position: absolute;
+    background-color: white;
+    z-index: +2;
+    left: 580px;
+}
+
+.border-top {
+    width: 660px;
+    height: 50px;
+   position: absolute;
+    background-color: white;
+    z-index: +2;
+    top: -50px;
+
+}
+
+.sky {
+    background-image: url('game-background-4956017_1280.png');
+    width: 500px;
+    height: 580px;
+    position: absolute;
+}
+
+.ground {
+    background-image: url('stone_floor_cropped.png');
+    width: 500px;
+    height: 150px;
+    position: absolute;
+    top: 580px;
+    z-index: +1;
+    
+}
+
+.bird {
+    background-image: url('flappy-bird.png');
+    position: absolute;
+    width: 60px;
+    height: 45px;
+    left: 220px;
+    bottom: 100px;
+
+}
+
+.obstacle {
+    background-image: url('pipe_purple_cropped.png');
+    width: 60px;
+    height: 300px;
+    position: absolute;
+    
+}
+
+.topObstacle {
+    background-image: url('pipe_purple_cropped.png');
+    transform: rotate(180deg);
+    width: 60px;
+    height: 300px;
+    position: absolute;
+    
+}
+
+@keyframes slideright {
+    from {
+        background-position: 10000%;
+    }
+    to {
+        background-position: 0%;
+    }
+  }
+  
+  @-webkit-keyframes slideright {
+    from {
+        background-position: 10000%;
+    }
+    to {
+        background-position: 0%;
+    }
+  }
+
+  .ground-container {
+      height: 150px;
+      width: 580px;
+      left: 80px;
+      position:  absolute;
+      
+  }
+  
+  .ground-moving {
+    position: absolute;
+    top: 580px;
+    height: 150px;
+    background-image: url('stone_floor_cropped.png');
+    background-repeat: repeat-x;
+    animation: slideright 90s infinite linear;
+    -webkit-animation: slideright 90s infinite linear;
+    width: 100%;
+    z-index: +1;
+    
+  }
+
+  .score {
+     /*position : fixed;*/
+     left: 580 px;
+     width: 660px;
+     z-index: +10;
+     height: 300;
+     font-size: 4vh;
+     font-weight: 35;
+     color: black;
+     top: 0;
+     
+  }
+
+  .score_val{
+    color: black;
+  }
+
+  .overlay { 
+  position: fixed;
+  top: 0;
+  left: 80px;
+  width : 500px;
+  height : 730px;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+
+.game-over {
+  color: white;
+  font-family: "Copperplate", "Courier New" ,Fantasy;
+  font-size: 55px;
+  backdrop-filter: blur(10px);
+}
+#countdownOverlay {
+    position: fixed;
+    top: 0;
+    left: 80px;
+    width: 500px;
+    height: 730px;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-family: "Copperplate", "Courier New", Fantasy;
+    font-size: 55px;
+    font-weight: bold;
+    text-align: center;
+    z-index: 1000;
+}
+
+
+#restartButton {
+    background-color: #ffcc00;
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+#restartButton:hover {
+    background-color: #ffaa00;
+}
+

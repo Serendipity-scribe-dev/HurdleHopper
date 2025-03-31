@@ -1,0 +1,29 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    /*background-color: #87CEEB;*/
+    background-image: url('background.png');
+}
+
+.container {
+    text-align: center;
+}
+
+h1 {
+    font-family: 'Arial', sans-serif;
+    color: #fff;
+}
+
+button {
+    padding: 15px 15px;
+    font-size: 20px;
+    cursor: pointer;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+}
