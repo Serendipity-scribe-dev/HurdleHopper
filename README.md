@@ -11,6 +11,8 @@ The game features:
 ## Tech Stack
 
 - **Frontend:** HTML, CSS, JavaScript
+- **Backend:** JavaScript
+- **Deployment:** Render
 
 ## Live Demo
 
